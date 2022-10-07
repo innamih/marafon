@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather';
+    font-style: bold;
+    font-family: 'Roboto', sans-serif;
+    min-height: 320px;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*@media (min-width: 640px) {
+    .container {
+        padding: 0 30px;
+    }
+}*/
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}
+
+.header_inner {
+    min-height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+/*@media (min-width: 640px) {
+    .header {
+        &_inner {
+            min-height: 100px;
+        }
+    }
+}*/
+
+/*.logo_link{
+    margin-left: 8px;
+}
+@media (min-width: 640px){
+    .logo_link{
+       margin-left: 14px;
+    } 
+}*/
+/*@media (min-width: 640px){
+    .logo_link{
+       margin-left: 0px;
+    } 
+}*/
+
+@media (min-width: 1440px) {
+    .search {
+        margin-right: 361px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .location {
+        margin-right: 277px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wave {
+        margin-right: 151px;
+    }
+}
+
+/* Волна*/
+/*section {
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}*/
+
+.wavy {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background-image: url(../img/Vector\ 1background.svg);
+    bottom: 0;
+    left: 0;
+    background-size: 2000px 100px;
+    animation: animate 30s ease-in-out infinite;
+
+    @keyframes animate {
+
+        0% {
+            background: position x 0px;
+        }
+
+        100% {
+            background: position x 2000px;
+        }
+
+        /*коробочка лекарства*/
+        .box1 {
+            background-origin: padding-box;
+            position: absolute;
+            left: -75px;
+            width: 468px;
+            height: 276px;
+            top: 217px;
+            display: flex;
+        }
+
+        .box2 {
+            background-origin: padding-box;
+            position: absolute;
+            left: 553px;
+            width: 468px;
+            height: 276px;
+            top: 217px;
+            display: flex;
+        }
+
+        .box3 {
+            background-origin: padding-box;
+            position: absolute;
+            left: 931px;
+            width: 374px;
+            height: 374px;
+            top: 193px;
+            display: flex;
+        }
+
+        .pages {
+            position: absolute;
+            left: 117px;
+            width: 83px;
+            height: 34px;
+            top: 463px;
+        }
+
+        .buy {
+            position: absolute;
+            left: 93px;
+            width: 132px;
+            height: 34px;
+            top: 513px;
+
+        }
+
+        /*Бегущая строка*/
+
+        p {
+            text-align: center;
+        }
+
+        .marquee text {
+            margin: 30px auto;
+            border: 1px solid #000;
+            max-width: 80%;
+            overflow: hidden;
+        }
+
+        .marquee text div {
+            width: 100%;
+            animation: marquee-text 5s linear infinite;
+        }
+
+        .marquee-infinite {
+            margin: 30px auto;
+            border: 1px solid #000;
+            max-width: 18%;
+            overflow: hidden;
+        }
+
+        .marquee-infinite div {
+            display: flex;
+            width: 200%;
+            animation: marquee-infinite 5s linear infinite;
+        }
+
+        .marquee-infinite h1 {
+            white-space: nowrap;
+            width: 100%;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 56px;
+            text-transform: uppercase;
+            color: #590d56;
+        }
+
+        @keyframes marquee-text {
+            0% {
+                transform: translatex(100%);
+            }
+
+            100% {
+                transform: translatex(-100%);
+            }
+        }
+
+        @keyframes marquee-infinite {
+
+            0% {
+                transform: translatex(0%);
+            }
+
+            100% {
+                transform: translatex(-50%);
+            }
+        }
+
+        /*прописать размер бегущей строки для большого экрана*/
+
+        .efficiency {
+            position: absolute;
+            width: 165px;
+            height: 50px;
+            left: 247px;
+            top: 1201.01px;
+            display: flex;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 154.8%;
+
+            /* or 25px */
+
+            color: #242424;
+
+        }
+
+        .dosage {
+            position: absolute;
+            width: 166px;
+            height: 50px;
+            left: 636px;
+            top: 1201.01px;
+            display: flex;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 154.8%;
+
+            /* or 25px */
+
+            color: #242424;
+        }
+
+        .comnvenient {
+            position: absolute;
+            width: 263px;
+            height: 50px;
+            left: 1027px;
+            top: 1201.01px;
+            display: flex;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 154.8%;
+
+            /* or 25px */
+
+            color: #242424;
+        }
+
+        .mark {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 1240px;
+            top: 1221px;
+            display: flex;
+            /*анимация при наведении.клике появляется мини всплывашка*/
+
+        }
+
+        p {
+            position: absolute;
+            width: 263px;
+            height: 67px;
+            left: 150px;
+            top: 1386px;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 120%;
+
+            /* or 36px */
+
+            color: #000000;
+        }
+
+        .line {
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 100%;
+
+            border: 1px solid #47093E;
+        }
+
+        .star {
+            position: absolute;
+            width: 134px;
+            height: 134px;
+            left: 560px;
+            top: 1399.01px;
+
+            background: #590D56;
+        }
+
+        p1 {
+            position: absolute;
+            left: 34.55%;
+            right: 23%;
+            top: 10.82%;
+            bottom: 18.04%;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 100%;
+
+            /* or 30px */
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+        }
+
+        /*всплывающее окно на выбор фото биг завод*/
+
+        p2 {
+            position: absolute;
+            width: 312px;
+            height: 79px;
+            left: 150px;
+            top: 2656px;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 120%;
+
+            /* or 36px */
+
+            color: #000000;
+        }
+
+        /*фон О ПРОИЗВОД ВЕНАРУС*/
+        .background prodact {
+            position: absolute;
+            width: 1440px;
+            height: 858px;
+            left: 0px;
+            top: 2306.01px;
+
+            background: linear-gradient(258.57deg, #590D56 15.97%, #8C1688 86.57%);
+            mix-blend-mode: normal;
+        }
+
+        /*СЕРЫЕ МАЛ ОБЗАЦ*/
+        h5 {
+            position: absolute;
+            width: 263px;
+            height: 100px;
+            left: 150px;
+            top: 3355px;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 154.8%;
+
+            /* or 25px */
+
+            color: #777777;
+        }
+
+        /*ФОН ПОСЛЕ СПЕЦ*/
+
+        .after spec {
+            position: absolute;
+            width: 1440px;
+            height: 857px;
+            left: 0px;
+            top: 3854.01px;
+
+            background: linear-gradient(251.17deg, #590D56 6.71%, #8C1688 68.41%);
+            mix-blend-mode: normal;
+        }
+
+        p3 {
+            position: absolute;
+            width: 1138px;
+            height: 31px;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+            line-height: 100%;
+
+            /* identical to box height, or 31px */
+            letter-spacing: 0.04em;
+
+            color: #540C50;
+
+            opacity: 0.8;
+        }
+
+        h6 {
+            position: absolute;
+            width: 314.91px;
+            height: 12px;
+            left: 151px;
+            top: 5495px;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 100%;
+
+            /* identical to box height, or 12px */
+
+            color: #7A7A7A;
+        }
+
+        .inform {
+            position: absolute;
+            width: 347px;
+            height: 52px;
+            left: 150px;
+            top: 651px;
+
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+
+            /* or 16px */
+
+            color: #000000;
+
+
+        }
